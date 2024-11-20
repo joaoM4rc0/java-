@@ -7,8 +7,8 @@ public class tipos_primitivos {
         short b = 1000;
         int c = 20;
         long d = 20000L; 
-        float e = 2.2f;
-        double f = 3.14159; 
+        float e = 2.2F;
+        double f = 3.14159D; 
         char g = 'A';
         boolean h = true;
         // Imprimir valores
@@ -20,5 +20,6 @@ public class tipos_primitivos {
         System.out.println("double: " + f);
         System.out.println("char: " + g);
         System.out.println("boolean: " + h);
+
     }
 }

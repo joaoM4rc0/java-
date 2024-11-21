@@ -1,4 +1,3 @@
-package aprendendo.aula;
 
 public class tipos_primitivos {
     public static void main(String[] args) {

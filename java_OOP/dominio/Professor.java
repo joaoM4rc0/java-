@@ -1,6 +1,6 @@
 package java_OOP.dominio;
 
-public class Estudante {
+public class Professor {
     public String nome;
     public int idade;
     public char sexo;
@@ -12,15 +12,12 @@ public class Estudante {
         this.nome = nome;
     }
     public int getIdade() {
-
         return idade;
     }
     public void setIdade(int idade) {
-
         this.idade = idade;
     }
     public char getSexo() {
-
         return sexo;
     }
     public void setSexo(char Sexo) {

@@ -5,7 +5,7 @@ public class Funcionarios {
     public int idade; 
     public double[] salario;
     private double salarioSomado;
-    public void ImprimeDados() {
+    public void somaSalarioT() {
         if (salario == null || salario.length == 0) {
             System.out.println("Erro: Salário não disponível."); 
             return;
@@ -14,6 +14,9 @@ public class Funcionarios {
         for (double d : salario) {
             salarioSomado += d;           
         }
+    }
+    public void ImprimeDados() {
+        somaSalarioT();
         System.out.println("nome: " + this.nome + ", idade: " + this.idade + " e esse é o meu salario: " + this.salarioSomado +"R$");
     }
     public void mediaSalarial(double... salario) {

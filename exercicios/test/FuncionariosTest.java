@@ -9,6 +9,7 @@ public class FuncionariosTest {
         funcionarios.nome = "joao";
         funcionarios.idade = 18;
         funcionarios.salario = new double[]{1000, 2000, 3000};
+        
         funcionarios.ImprimeDados();
         System.out.println("------------------");
         funcionarios.mediaSalarial(funcionarios.salario);

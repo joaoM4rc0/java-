@@ -1,7 +1,6 @@
 package java_OOP.test02;
 
 import java_OOP.dominio02.Estudante;
-import java_OOP.dominio02.ImprimeEstudante;
 
 public class EstudanteTest {
     public static void main(String[] args) {
@@ -16,10 +15,9 @@ public class EstudanteTest {
         estudante02.idade = 22;
         estudante02.sexo = 'F';
 
-        ImprimeEstudante impressora = new ImprimeEstudante();
 
-        impressora.Imprime(estudante);
+        estudante.Imprime();
         System.out.println("-----------------------------------");
-        impressora.Imprime(estudante02);
+        estudante02.Imprime();
     }
 }

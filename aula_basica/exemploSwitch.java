@@ -1,4 +1,4 @@
-public class ExemploSwitch {
+public class exemploSwitch {
     public static void main(String[] args) {
         int diaDaSemana = 4; // suponha que 1 = domingo, 2 = segunda-feira, etc.
 

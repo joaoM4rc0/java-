@@ -4,6 +4,7 @@ public class Professor {
     private String nome;
     private String[] especialidade;
     private Seminario[] seminarios;
+    private Aluno[] alunos;
 
     public Professor(String nome) {
         this.nome = nome;
@@ -20,21 +21,28 @@ public class Professor {
     }
 
     public void  imprime(){
-        System.out.println(this.nome);
+        System.out.println("nome do professor: " + this.nome);
 
         if (especialidade == null) {
             System.out.println("o professor tem que ter alguma especialidade");
             return;
         }
         for (String especializacao: especialidade) {
-            System.out.println(especializacao);
+            System.out.println("especializacao do professor: " + especializacao);
         }
         if (seminarios == null) {
             System.out.println("nao tem nenhum seminario");
             return;
         }
         for (Seminario seminario : seminarios) {
-            System.out.println(seminario.getTitulo());
+            System.out.println("seminarios: " + seminario.getTitulo());
+        }
+        if (alunos == null) {
+            System.out.println("O professor nao tem nenhum aluno!!");
+            return;
+        }
+        for (Aluno aluno : alunos) {
+            System.out.println("nome dos alunos: " + aluno.getNome() );
         }
     }
     public String getNome() {
@@ -59,5 +67,13 @@ public class Professor {
 
     public void setSeminarios(Seminario[] seminarios) {
         this.seminarios = seminarios;
+    }
+
+    public Aluno[] getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(Aluno[] alunos) {
+        this.alunos = alunos;
     }
 }

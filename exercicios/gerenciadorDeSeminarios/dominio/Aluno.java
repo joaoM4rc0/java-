@@ -12,10 +12,10 @@ public class Aluno {
         this.idade = idade;
     }
     public void imprime() {
-        System.out.println(this.nome);
-        System.out.println(this.idade);
+        System.out.println("nome do aluno: " + this.nome);
+        System.out.println("idade do aluno: " + this.idade);
         if (seminario != null) {
-        System.out.println(seminario.getTitulo());
+        System.out.println("seminario que o aluno vai apresentar: " + seminario.getTitulo());
         return;
         }
     }

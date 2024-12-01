@@ -13,13 +13,14 @@ public class Seminario {
     }
 
     public void imprime() {
+        System.out.println("nome do seminario: " + this.titulo);
         if (alunos == null) {
             System.out.println("nao existe aluno nesse seminario");
             return;
         }
         for (Aluno alunos : alunos) {
-            System.out.println(alunos.getNome());
-            System.out.println(alunos.getIdade());
+            System.out.println("Nome do aluno: " + alunos.getNome());
+            System.out.println("idade do aluno: " + alunos.getIdade());
         }
     }
     public String getTitulo() {

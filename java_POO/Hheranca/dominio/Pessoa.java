@@ -1,10 +1,20 @@
 package java_POO.Hheranca.dominio;
 
 public class Pessoa {
-    private String nome;
+    private
+    String nome;
     private String cpf;
     private Endereco endereco;
 
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+    public void imprime() {
+        System.out.println(this.nome);
+        System.out.println(this.cpf);
+        System.out.println(this.endereco.getCep() + " " + this.endereco.getRua());
+    }
     public String getNome() {
         return nome;
     }

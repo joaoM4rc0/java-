@@ -8,10 +8,11 @@ public class HherancaTest {
         Endereco endereco = new Endereco();
         endereco.setCep("52364-000");
         endereco.setRua("rua das paixões");
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("inuyasha");
+        Funcionario funcionario = new Funcionario("inuyasha");
         funcionario.setSalario(18000);
         funcionario.setCpf("188-161-174-01");
         funcionario.setEndereco(endereco);
+
+        funcionario.imprime();
     }
 }

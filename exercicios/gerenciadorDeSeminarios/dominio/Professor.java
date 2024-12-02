@@ -6,45 +6,51 @@ public class Professor {
     private Seminario[] seminarios;
     private Aluno[] alunos;
 
+    // Construtores
     public Professor(String nome) {
         this.nome = nome;
     }
-    public Professor(String nome, String[] especialiades) {
-        this.nome = nome;
-        this.especialidade = especialiades;
+
+    public Professor(String nome, String[] especialidades) {
+        this(nome); // Chama o construtor principal
+        this.especialidade = especialidades;
     }
 
     public Professor(String nome, String[] especialidade, Seminario[] seminarios) {
-        this.nome = nome;
-        this.especialidade = especialidade;
+        this(nome, especialidade); // Chama o segundo construtor
         this.seminarios = seminarios;
     }
 
-    public void  imprime(){
-        System.out.println("nome do professor: " + this.nome);
+    // Métodos de impressão
+    public void imprime() {
+        System.out.println("Nome do professor: " + this.nome);
 
-        if (especialidade == null) {
-            System.out.println("o professor tem que ter alguma especialidade");
-            return;
+        if (especialidade == null || especialidade.length == 0) {
+            System.out.println("O professor deve ter alguma especialidade.");
+        } else {
+            System.out.println("Especializações do professor: " + String.join(", ", especialidade));
         }
-        for (String especializacao: especialidade) {
-            System.out.println("especializacao do professor: " + especializacao);
+
+        if (seminarios == null || seminarios.length == 0) {
+            System.out.println("Nenhum seminário registrado.");
+        } else {
+            System.out.println("Seminários:");
+            for (Seminario seminario : seminarios) {
+                System.out.println(" - " + seminario.getTitulo());
+            }
         }
-        if (seminarios == null) {
-            System.out.println("nao tem nenhum seminario");
-            return;
-        }
-        for (Seminario seminario : seminarios) {
-            System.out.println("seminarios: " + seminario.getTitulo());
-        }
-        if (alunos == null) {
-            System.out.println("O professor nao tem nenhum aluno!!");
-            return;
-        }
-        for (Aluno aluno : alunos) {
-            System.out.println("nome dos alunos: " + aluno.getNome() );
+
+        if (alunos == null || alunos.length == 0) {
+            System.out.println("O professor não tem nenhum aluno.");
+        } else {
+            System.out.println("Alunos:");
+            for (Aluno aluno : alunos) {
+                System.out.println(" - " + aluno.getNome());
+            }
         }
     }
+
+    // Getters e setters
     public String getNome() {
         return nome;
     }

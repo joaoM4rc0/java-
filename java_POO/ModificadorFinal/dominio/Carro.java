@@ -1,13 +1,6 @@
 package java_POO.ModificadorFinal.dominio;
 
 public class Carro {
-    public String name;
+    public static final double VELOCIDADE_LIMITE = 250;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

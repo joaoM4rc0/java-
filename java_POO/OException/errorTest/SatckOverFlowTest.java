@@ -1,4 +1,4 @@
-package java_POO.OException.test;
+package java_POO.OException.errorTest;
 
 public class SatckOverFlowTest {
     public static void main(String[] args) {

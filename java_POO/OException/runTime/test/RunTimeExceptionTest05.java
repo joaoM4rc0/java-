@@ -1,18 +1,17 @@
 package java_POO.OException.runTime.test;
 
 public class RunTimeExceptionTest05 {
-    public static void main(String[] args) {
-        try {
-            int[] numeros = {5,1,2};
-            System.out.println(numeros[4]);
-            int resul = 10 / 0 ;
-            System.out.println(resul);
-        }catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("erro no index: " + e.getMessage());
-        }catch (ArithmeticException e) {
-            System.out.println("nao pode dividir por zero erro: " + e.getMessage());
-        }finally {
-            System.out.println("executando o finally");
+        public static void main(String[] args) {
+            try {
+                int[] arr = new int[2];
+                System.out.println(arr[5]); // Lança ArrayIndexOutOfBoundsException
+                int result = 10 / 0; // Lança ArithmeticException
+            } catch (ArrayIndexOutOfBoundsException | ArithmeticException e) {
+                System.out.println("Erro específico: " + e.getMessage());
+            } catch (Exception e) {
+                System.out.println("Erro genérico: " + e.getMessage());
+            } finally {
+                System.out.println("Bloco finally executado.");
+            }
         }
-    }
 }

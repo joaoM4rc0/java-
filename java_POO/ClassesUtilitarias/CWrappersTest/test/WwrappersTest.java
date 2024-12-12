@@ -10,5 +10,8 @@ public class WwrappersTest {
         Long l = 88l;
         Float f = 5f;
         Double d = 5d;
+
+        int numero = num;
+        System.out.println(numero);
     }
 }

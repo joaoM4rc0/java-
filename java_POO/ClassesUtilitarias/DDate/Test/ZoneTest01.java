@@ -1,9 +1,7 @@
 package java_POO.ClassesUtilitarias.DDate.Test;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
+import java.time.chrono.JapaneseDate;
 import java.util.Map;
 
 public class ZoneTest01 {
@@ -19,6 +17,13 @@ public class ZoneTest01 {
         Instant data02 = Instant.now();
         ZonedDateTime zonedDateTime2 = data02.atZone(tokyoZone);
         System.out.println(zonedDateTime2);
+
+        ZoneOffset offsetManaus = ZoneOffset.of("-01:00");
+        OffsetDateTime offsetDateTime = data.atOffset(offsetManaus);
+        System.out.println(offsetDateTime);
+
+        JapaneseDate japaneseDate = JapaneseDate.from(LocalDateTime.now());
+        System.out.println(japaneseDate);
 
     }
 }

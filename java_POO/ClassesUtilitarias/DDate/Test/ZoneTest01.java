@@ -1,5 +1,6 @@
 package java_POO.ClassesUtilitarias.DDate.Test;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -13,7 +14,11 @@ public class ZoneTest01 {
         ZoneId tokyoZone = ZoneId.of("Asia/Tokyo");
 
         ZonedDateTime zonedDateTime = data.atZone(tokyoZone);
-        System.out.println(zonedDateTime.plusHours(9));
+        System.out.println(zonedDateTime);
+
+        Instant data02 = Instant.now();
+        ZonedDateTime zonedDateTime2 = data02.atZone(tokyoZone);
+        System.out.println(zonedDateTime2);
 
     }
 }

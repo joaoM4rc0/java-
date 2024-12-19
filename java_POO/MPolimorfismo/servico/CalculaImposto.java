@@ -1,7 +1,6 @@
 
 package java_POO.MPolimorfismo.servico;
 
-import java_POO.MPolimorfismo.dominio.Computador;
 import java_POO.MPolimorfismo.dominio.Produto;
 import java_POO.MPolimorfismo.dominio.Televisao;
 

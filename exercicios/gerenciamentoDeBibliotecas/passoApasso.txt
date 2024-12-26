@@ -1,0 +1,6 @@
+Crie uma hierarquia de classes para representar
+diferentes tipos de materiais de biblioteca(livros, revistas, DVDs).
+
+Utilize polimorfismo para implementar métodos de empréstimo e devolução.
+
+Adicione funcionalidades para calcular multas com base na data de devolução.

@@ -13,5 +13,9 @@ public class NioTest02 {
         }
         Path paths = Paths.get("pasta/subpasta/subsubpasta");
         Path directories = Files.createDirectories(paths);
+        Path filePaths = Paths.get(paths.toString(), "test.txt");
+        if (Files.notExists(filePaths)) {
+            Path filesPathCreated = Files.createFile(filePaths);
+        }
     }
 }

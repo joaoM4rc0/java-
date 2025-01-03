@@ -11,5 +11,7 @@ public class NormilizeTest01 {
         Path path1 = Paths.get(caminho, arquivoTxt);
         System.out.println(path1);
         System.out.println(path1.normalize());
+        Path path2 = Paths.get("/home/./joao/./text/");
+        System.out.println(path2.normalize());
     }
 }

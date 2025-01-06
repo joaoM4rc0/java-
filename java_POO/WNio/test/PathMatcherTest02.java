@@ -7,7 +7,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 class ListAllFiles02 extends SimpleFileVisitor<Path> {
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-        matches(file, "glob:**/*{Test*}.{java,class}");
+        matches(file, "glob:**/*Test*.{java,class}");
         return FileVisitResult.CONTINUE;
     }
 

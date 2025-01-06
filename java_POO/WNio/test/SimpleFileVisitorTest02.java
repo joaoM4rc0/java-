@@ -1,40 +1,41 @@
-package java_POO.WNio.test;
-
-import java.io.IOException;
 import java.nio.file.*;
-import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.*;
+import java.io.IOException;
 
-class ListAllFiles extends SimpleFileVisitor<Path> {
+public class SimpleFileVisitorTest02 extends SimpleFileVisitor<Path> {
+
     @Override
-    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs){
-        if (file.getFileName().toString().endsWith(".java")) {
-            System.out.println(file.getFileName());
-        }
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
+        System.out.println("Visited file: " + file);
         return FileVisitResult.CONTINUE;
     }
 
     @Override
-    public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-        return super.preVisitDirectory(dir, attrs);
+    public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
+        System.out.println("About to visit directory: " + dir);
+        return FileVisitResult.CONTINUE;
     }
 
     @Override
-    public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
-        return super.visitFileFailed(file, exc);
+    public FileVisitResult postVisitDirectory(Path dir, IOException exc) {
+        System.out.println("Visited directory: " + dir);
+        return FileVisitResult.CONTINUE;
     }
 
     @Override
-    public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-        return super.postVisitDirectory(dir, exc);
+    public FileVisitResult visitFileFailed(Path file, IOException exc) {
+        System.err.println("Failed to visit file: " + file);
+        return FileVisitResult.CONTINUE;
     }
-}
-public class SimpleFileVisitorTest02 {
+
     public static void main(String[] args) {
-        Path root = Paths.get(".");
+        Path startPath = Paths.get("/path/to/start");
+
+        SimpleFileVisitorTest02 visitor = new SimpleFileVisitorTest02();
         try {
-            Path path = Files.walkFileTree(root, new ListAllFiles());
+            Files.walkFileTree(startPath, visitor);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }

@@ -20,6 +20,7 @@ public class ZipOutputStreamTest01 {
             for(Path file : directoryStream) {
                 ZipEntry zipEntry = new ZipEntry(file.getFileName().toString());
                 zipOutputStream.putNextEntry(zipEntry);
+                Files.copy(file,zipOutputStream);
                 zipOutputStream.closeEntry();
             }
         }catch (IOException e) {

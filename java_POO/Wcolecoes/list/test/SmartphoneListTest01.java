@@ -8,6 +8,7 @@ public class SmartphoneListTest01 {
     public static void main(String[] args) {
         SmartPhone02 s1 = new SmartPhone02("xiaomi", "5f5e852");
         SmartPhone02 s2 = new SmartPhone02("samsung", "5f5e852");
+        SmartPhone02 s3 = new SmartPhone02("samsung", "5f5e852");
 
         List<SmartPhone02> celulares = new ArrayList<>();
         celulares.add(s1);
@@ -15,6 +16,7 @@ public class SmartphoneListTest01 {
         for (SmartPhone02 celular : celulares) {
             System.out.println(celular);
         }
+        System.out.println(celulares.contains(s3));
     }
 
 }

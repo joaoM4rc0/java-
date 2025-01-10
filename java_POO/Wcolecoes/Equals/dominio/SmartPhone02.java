@@ -10,6 +10,14 @@ public class SmartPhone02 {
     }
 
     @Override
+    public String toString() {
+        return "SmartPhone02{" +
+                "marca='" + marca + '\'' +
+                ", serialNumber='" + serialNumber + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if(obj == null) return false;
         if(this == obj) return true;

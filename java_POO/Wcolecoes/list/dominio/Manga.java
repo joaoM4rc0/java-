@@ -65,6 +65,7 @@ public class Manga implements Comparable<Manga>{
 
     @Override
     public int compareTo(@NotNull  Manga outroManga) {
-        return Long.compare(this.id, outroManga.getId());
+        return Double.valueOf(this.preco).compareTo(outroManga.getPreco());
+//        return Long.compare(this.id, outroManga.getId());
     }
 }

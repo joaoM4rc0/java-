@@ -1,8 +1,11 @@
 package java_POO.Wcolecoes.list.dominio;
 
+
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga>{
     private long id;
     private String nome;
     private double preco;
@@ -58,5 +61,10 @@ public class Manga {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public int compareTo(@NotNull  Manga outroManga) {
+        return Long.compare(this.id, outroManga.getId());
     }
 }

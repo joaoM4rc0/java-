@@ -13,13 +13,13 @@ public class IteratorTest01 {
         mangas.add(new Manga(2L, "dandadan",145.8, 4));
         mangas.add(new Manga(8L, "One piece", 210.88, 0));
         mangas.add(new Manga(18L, "Jujutsu kaisen", 100.7, 2));
-
-        Iterator<Manga> mangaIterator = mangas.iterator();
-        while(mangaIterator.hasNext()) {
-            if (mangaIterator.next().getQuantidade() == 0) {
-                mangaIterator.remove();
-            }
-        }
+//        Iterator<Manga> mangaIterator = mangas.iterator();
+//        while(mangaIterator.hasNext()) {
+//            if (mangaIterator.next().getQuantidade() == 0) {
+//                mangaIterator.remove();
+//            }
+//        }
+        mangas.removeIf(manga -> manga.getQuantidade() == 0);
         System.out.println(mangas);
 
     }

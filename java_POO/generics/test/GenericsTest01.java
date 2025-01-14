@@ -19,7 +19,7 @@ public class GenericsTest01 {
             // da erro: ClassCastException
         }
     }
-    private static <T> void add(List<T> nomes, T consumidor) {
-        nomes.add(consumidor);
+    private static <T> void add(List<T> list, Consumidor consumidor) {
+//        list.add(consumidor);
     }
 }

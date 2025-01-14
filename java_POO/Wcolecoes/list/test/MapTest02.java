@@ -5,7 +5,7 @@ import java_POO.Wcolecoes.list.dominio.Manga;
 
 import java.util.HashMap;
 import java.util.Map;
-
+// consumidor compra um manga
 public class MapTest02 {
     public static void main(String[] args) {
         Consumidor consumidor1 = new Consumidor("joao marco");

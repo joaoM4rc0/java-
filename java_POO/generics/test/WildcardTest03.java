@@ -1,6 +1,5 @@
 package java_POO.generics.test;
 
-
 import java.util.List;
 
 public class WildcardTest03 {

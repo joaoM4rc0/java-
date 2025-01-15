@@ -1,7 +1,24 @@
 package java_POO.generics.test;
 
+abstract class Animal {
+    public abstract void consulta();
+}
+class Cachorro extends Animal {
 
-public class WildcardTest01 {
+    @Override
+    public void consulta() {
+        System.out.println("consultando cachorro");
+    }
+}
+
+class Gato extends Animal {
+
+    @Override
+    public void consulta() {
+        System.out.println("consultando gato");
+    }
+}
+public class WildcardTest02 {
     public static void main(String[] args) {
        Cachorro[] cachorros = {new Cachorro(), new Cachorro()};
        Gato[] gatos = {new Gato(), new Gato()};

@@ -1,14 +1,17 @@
 package java_POO.generics.test;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class WildcardTest01 {
     public static void main(String[] args) {
-       Cachorro[] cachorros = {new Cachorro(), new Cachorro()};
-       Gato[] gatos = {new Gato(), new Gato()};
-       printConsulta(cachorros);
+        List<Cachorro> cachorros = List.of(new Cachorro(), new Cachorro());
+        List<Gato> gatos = List.of(new Gato(), new Gato());
+//        printConsulta(cachorros);
     }
-
-    private static void printConsulta(Animal[] animals) {
+    // type erasure
+    private static void printConsulta(List<Animal> animals) {
         for (Animal animal: animals) {
             animal.consulta();
         }

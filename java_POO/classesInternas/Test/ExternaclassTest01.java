@@ -4,6 +4,8 @@ public class ExternaclassTest01 {
     class Inner {
         public void exbir(String nome) {
             System.out.println("esse é o seu nome: " + nome);
+            System.out.println(this);
+            System.out.println(ExternaclassTest01.this);
         }
     }
 

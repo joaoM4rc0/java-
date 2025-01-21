@@ -17,7 +17,6 @@ public class ComportamentoPorParametroTest03 {
         System.out.println(greenCar);
         System.out.println(filter(nums, numeros -> numeros % 2 == 0));
         System.out.println(filter(nums, numeros -> numeros % 2 == 1));
-<<<<<<< Updated upstream
     }
     private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
         List<T> list2 = new ArrayList<>();
@@ -29,16 +28,3 @@ public class ComportamentoPorParametroTest03 {
         return list2;
     }
 }
-=======
-    }
-    private static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
-        List<T> list2 = new ArrayList<>();
-        for (T t : list) {
-            if (predicate.test(t)) {
-                list2.add(t);
-            }
-        }
-        return list2;
-    }
-}
->>>>>>> Stashed changes

@@ -8,7 +8,7 @@ import java.util.function.Function;
 public class LambdasTest03 {
     public static void main(String[] args) {
         List<String> string = List.of("naruto", "imak", "sukuna");
-        List<Integer> map = map(string, s -> s.length());
+        List<Integer> map = map(string, String::length);
         System.out.println(map);
     }
     private static <T, R> List<R> map(List<T> list, Function<T, R> function) {

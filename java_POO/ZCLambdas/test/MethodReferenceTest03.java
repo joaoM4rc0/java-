@@ -13,6 +13,6 @@ public class MethodReferenceTest03 {
         List<String> list = new ArrayList<>(List.of("davi", "mathias", "ronaldo"));
         list.sort(String::compareTo);
         BiPredicate<List<String>, String> checkdName = List::contains;
-        System.out.println(checkdName);
+        System.out.println(checkdName.test(list, "davi"));
     }
 }

@@ -16,11 +16,23 @@ public class StreamTest01 {
                     new LightNovel("one piece", 3.7),
                     new LightNovel("dandandan", 5.8),
                     new LightNovel("overlord", 7.7),
-                    new LightNovel("monogatari", 3.2)
+                    new LightNovel("monogatari", 3.9)
     )
     );
+    private static List<String> nameLightNovel = new ArrayList<>();
     public static void main(String[] args) {
         lightNovels.sort(Comparator.comparing(LightNovel::getTitle));
+
         System.out.println(lightNovels);
+        for (LightNovel lightNovel : lightNovels) {
+            if (lightNovel.getPreco() <= 4) {
+                nameLightNovel.add(lightNovel.getTitle());
+            }
+            if (nameLightNovel.size() > 3) {
+                String nameExcluido = nameLightNovel.remove(0);
+                System.out.println("nome excluido: " + nameExcluido);
+            }
+        }
+        System.out.println(nameLightNovel);
     }
 }

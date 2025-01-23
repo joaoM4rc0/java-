@@ -10,6 +10,8 @@ import java.util.stream.Collectors;
 
 // ordernar por title
 // retornar 3 light novels com valor menor do que 4
+
+//resolvido
 public class StreamTest02 {
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(
                     new LightNovel("youkoso jitsuryoko", 2.5),

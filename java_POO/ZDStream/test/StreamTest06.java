@@ -26,5 +26,15 @@ public class StreamTest06 {
 
         System.out.println(lightNovels.stream().anyMatch(ln -> ln.getPreco() > 8.0));
         System.out.println(lightNovels.stream().allMatch(ln -> ln.getPreco() > 0));
+
+        lightNovels.stream()
+                .filter(ln -> ln.getPreco() > 3)
+                .sorted(Comparator.comparing(LightNovel::getPreco).reversed())
+                .findAny()
+                .ifPresent(System.out::println);
+        lightNovels.stream()
+                .filter(ln -> ln.getPreco() < 3)
+                .findFirst()
+                .ifPresent(System.out::println);
     }
 }

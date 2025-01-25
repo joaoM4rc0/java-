@@ -18,10 +18,3 @@ public class StreamTest09 {
                 .forEach(System.out::println);
     }
 }
-
-/*
-retorna:
-Neymar é o melhor jogador do futebol brasileiro
-o melhor anime é hajime no ippo
-melhor
- */

@@ -5,10 +5,15 @@ import java.util.Objects;
 public class LightNovel {
     private String title;
     private double preco;
+    private Category category;
+    public LightNovel(String title, double preco) {this.title = title;
+        this.preco = preco;
+    }
 
-    public LightNovel(String title, double preco) {
+    public LightNovel(String title, double preco, Category category) {
         this.title = title;
         this.preco = preco;
+        this.category = category;
     }
 
     @Override
@@ -28,7 +33,12 @@ public class LightNovel {
         return "LightNovel{" +
                 "title='" + title + '\'' +
                 ", preco=" + preco +
+                ", category=" + category +
                 '}';
+    }
+
+    public Category getCategory() {
+        return category;
     }
 
     public String getTitle() {

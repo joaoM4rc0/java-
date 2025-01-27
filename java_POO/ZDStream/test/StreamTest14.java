@@ -38,12 +38,11 @@ public class StreamTest14 {
         // essa foi uma recomendação do intellij, mas nao sei se tem alguma melhora no uso da memoria , ainda nao compreendo
         Map<Category, LightNovel> collect2 = lightNovels.stream().collect(
                 Collectors.toMap(LightNovel::getCategory, Function.identity(), BinaryOperator.maxBy(Comparator.comparing(LightNovel::getPreco))));
-        // oq eu encontrei:
         // BinaryOperator.maxBy é usado para resolver conflitos de chave
         // (quando mais de um LightNovel pertence à mesma categoria),
         // selecionando o de maior preço.
 
-        //Se o desempenho e o uso de memória forem preocupações críticas,
+        // Se o desempenho e o uso de memória forem preocupações críticas,
         // a segunda abordagem (collect2) pode ser mais eficiente devido à eliminação de agrupamentos intermediários.
         // No entanto, a diferença pode ser insignificante para conjuntos de dados menores.
     }

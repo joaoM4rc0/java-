@@ -27,7 +27,9 @@ public class StreamTest15 {
                         Collectors.summarizingDouble(LightNovel::getPreco)));
         System.out.println(collect);
         System.out.println("---------------");
-        Map<Category, Set<Promotion>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.mapping(StreamTest15::getPromotion, Collectors.toSet())));
+        Map<Category, Set<Promotion>> collect1 = lightNovels.stream()
+                .collect(Collectors.groupingBy(LightNovel::getCategory,
+                        Collectors.mapping(StreamTest15::getPromotion, Collectors.toSet())));
         System.out.println(collect1);
     }
     private static Promotion getPromotion(LightNovel ln) {

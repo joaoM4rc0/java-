@@ -1,5 +1,5 @@
 package java_POO.ZEThreads.test;
-
+// fazendo um dead lock
 public class DeadLockTest01 {
     public static void main(String[] args) {
         Object lock1  =new Object();

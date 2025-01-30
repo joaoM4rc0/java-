@@ -1,6 +1,7 @@
 package java_POO.ZFConcorrencia.service;
 
-import java_POO.ZEThreads.dominio.Members;
+
+import java_POO.ZFConcorrencia.dominio.Members;
 
 public class EmailDeliveryService implements Runnable{
     private Members members;

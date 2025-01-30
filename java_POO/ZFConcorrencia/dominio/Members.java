@@ -55,7 +55,7 @@ public class Members {
         lock.lock();
         try {
             System.out.println(Thread.currentThread().getName() + " nao vamos pegar mais emails ");
-            this.emails.notifyAll();
+            condition.signalAll();
         }finally {
             lock.unlock();
         }

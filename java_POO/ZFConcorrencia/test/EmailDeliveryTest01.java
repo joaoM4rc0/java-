@@ -1,7 +1,9 @@
 package java_POO.ZFConcorrencia.test;
 
-import java_POO.ZEThreads.dominio.Members;
-import java_POO.ZEThreads.service.EmailDeliveryService;
+
+
+import java_POO.ZFConcorrencia.dominio.Members;
+import java_POO.ZFConcorrencia.service.EmailDeliveryService;
 
 import javax.swing.*;
 

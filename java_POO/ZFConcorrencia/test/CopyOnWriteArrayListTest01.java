@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 public class CopyOnWriteArrayListTest01 {
     public static void main(String[] args) {
         List<Integer> integers = new CopyOnWriteArrayList<>();
-        for (int i = 0; i < 2000; i++) {
+        for (int i = 0; i <= 2000; i++) {
             integers.add(i);
         }
         Runnable runnableIterator = () -> {

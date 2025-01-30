@@ -1,4 +1,4 @@
-package java_POO.ZEThreads.test;
+package java_POO.ZFConcorrencia.test;
 
 import java_POO.ZEThreads.dominio.Members;
 import java_POO.ZEThreads.service.EmailDeliveryService;

@@ -17,6 +17,7 @@ public class CompletableFutureTest02 {
         List<CompletableFuture<Double>> collectFutures = stores.stream()
                 .map(service::getPrecoCompletableFuture)
                 .collect(Collectors.toList());
+
         List<Double> prices = collectFutures.stream()
                 .map(CompletableFuture::join)
                 .collect(Collectors.toList());

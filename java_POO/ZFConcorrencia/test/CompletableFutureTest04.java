@@ -34,6 +34,7 @@ public class CompletableFutureTest04 {
                 .map(s -> CompletableFuture.supplyAsync(() -> service.getPrice(s)))
                 .map(cf -> cf.thenApply(Quote::newQoate))
                 .map(cf ->
+                        // thenCompose está compondo o primeiro completableFuture
                         cf.thenCompose(quote -> CompletableFuture.supplyAsync(() -> service.aplicandoDesconto(quote))))
                 .collect(Collectors.toList());
         collectFutures.stream()
